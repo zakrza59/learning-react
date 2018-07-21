@@ -55,6 +55,14 @@ class App extends Component {
   debugger;
 
   render() {
+    const style = {
+      backgroundColor: "white",
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     let persons = null;
 
     if (this.state.showPerson) {
@@ -75,7 +83,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hi</h1>
-        <button onClick={this.togglePersonHandler} >Switch name</button>
+        <button 
+        style={style}
+        onClick={this.togglePersonHandler} >Switch name</button>
         {persons}
       </div>
     );
