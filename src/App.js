@@ -44,7 +44,6 @@ class App extends Component {
     const doesShow = this.state.showPerson;
     this.setState({showPerson: !doesShow})
   }
-  debugger;
 
   render() {
     let persons = null;
