@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     persons:[
       {id: '1', name: 'Max', age: 12},
-      {id: '2', name: 'Zed', age: 15},
+      {id: '2', name: 'Fiona', age: 15},
       {id: '3', name: 'Chris', age: 17}
     ],
     otherState: 'some other value',
