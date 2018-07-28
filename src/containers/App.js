@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Persons from '../components/Persons/Persons';
-import classes from './App.css';
 import Cockpit from '../components/Cockpit/Cockpit';
+import WithClassses from '../components/hoc/WithClass';
+import classes from './App.css';
 
 class App extends Component {
 
@@ -56,13 +57,13 @@ class App extends Component {
     }
 
     return (
-        <div className={classes.App}>
+        <WithClassses>
           <Cockpit 
             showPerson={this.state.showPerson}
             persons={this.state.persons}
             clicked={this.togglePersonHandler} />
           {persons}
-        </div>
+        </WithClassses>
     );
   }
 }
