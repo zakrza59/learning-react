@@ -1,31 +1,31 @@
-import React from 'react'
-import ReactAux from '../hoc/ReactAux'
-import classes from './Cockpit.css'
+import React from 'react';
 
-const Cockpit = (props) => {
-  const assignedClasses = [];
-  let btnClass = classes.Button;
-  if (props.showPerson) {
-    btnClass = [classes.Button, classes.Red].join(' ');
-  }
+import classes from './Cockpit.css';
+import ReactAux from '../../hoc/ReactAux';
 
-  if (props.persons.length <= 2) {
-    assignedClasses.push( classes.red ); 
-  }
+const cockpit = ( props ) => {
+    const assignedClasses = [];
+    let btnClass = classes.Button;
+    if ( props.showPersons ) {
+        btnClass = [classes.Button, classes.Red].join( ' ' );
+    }
 
-  if (props.persons.length <= 1) {
-    assignedClasses.push( classes.bold ); 
-  }
-  
-  return (
-    <ReactAux>
-      <h1>Hi</h1>
-      <p className={assignedClasses.join(' ')}>This works</p>
-      <button
-        className={btnClass} 
-        onClick={props.clicked} >Switch name</button>
-    </ReactAux>
-  )
-}
+    if ( props.persons.length <= 2 ) {
+        assignedClasses.push( classes.red ); // classes = ['red']
+    }
+    if ( props.persons.length <= 1 ) {
+        assignedClasses.push( classes.bold ); // classes = ['red', 'bold']
+    }
 
-export default Cockpit
+    return (
+        <ReactAux>
+            <h1>{props.appTitle}</h1>
+            <p className={assignedClasses.join( ' ' )}>This is really working!</p>
+            <button
+                className={btnClass}
+                onClick={props.clicked}>Toggle Persons</button>
+        </ReactAux>
+    );
+};
+
+export default cockpit;
