@@ -1,5 +1,5 @@
 import React from 'react'
-import Aux from '../hoc/ReactAux'
+import ReactAux from '../hoc/ReactAux'
 import classes from './Cockpit.css'
 
 const Cockpit = (props) => {
@@ -18,13 +18,13 @@ const Cockpit = (props) => {
   }
   
   return (
-    <Aux>
+    <ReactAux>
       <h1>Hi</h1>
       <p className={assignedClasses.join(' ')}>This works</p>
       <button
         className={btnClass} 
         onClick={props.clicked} >Switch name</button>
-    </Aux>
+    </ReactAux>
   )
 }
 
